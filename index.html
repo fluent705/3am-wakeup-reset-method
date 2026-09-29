@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d3438">
+  <meta name="description" content="The 3 A.M. Wake-Up Reset Method for women whose sleep changed with perimenopause or menopause.">
+  <title>The 3 A.M. Wake-Up Reset Method</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #0d3438;
+      --night-deep: #08272a;
+      --coral: #d73f59;
+      --coral-dark: #bd2944;
+      --gold: #ddb879;
+      --paper: #f8f5ef;
+      --mist: #e7efee;
+      --white: #ffffff;
+      --ink: #182627;
+      --muted: #566564;
+      --line: #cfdbd9;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+      --page: 1080px;
+      --reading: 760px;
+      --ease: cubic-bezier(.16,1,.3,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; scrollbar-color: var(--coral) var(--paper); }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--white);
+      font-family: var(--sans);
+      font-size: 16.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    p, h1, h2, h3 { margin-top: 0; }
+    p:last-child { margin-bottom: 0; }
+    ::selection { color: var(--white); background: var(--coral); }
+    :focus-visible { outline: 3px solid var(--white); outline-offset: 3px; box-shadow: 0 0 0 6px var(--night); }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 100;
+      padding: 8px 12px;
+      color: var(--white);
+      background: var(--night);
+      transform: translateY(-150%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .container { width: min(calc(100% - 40px), var(--page)); margin-inline: auto; }
+    .reading { width: min(calc(100% - 40px), var(--reading)); margin-inline: auto; }
+    .section { padding: 72px 8px; }
+
+    h1, h2, h3 { font-family: var(--serif); }
+    h1 {
+      max-width: 880px;
+      margin: 0 auto 17px;
+      color: var(--ink);
+      font-size: clamp(2.7rem, 4.65vw, 3.45rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+      line-height: 1.05;
+      text-wrap: balance;
+    }
+    h1 .hero-emphasis {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--coral);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: .1em;
+      text-underline-offset: .15em;
+    }
+    h2 {
+      margin-bottom: 17px;
+      color: var(--night);
+      font-size: clamp(2rem, 3.7vw, 2.85rem);
+      font-weight: 600;
+      letter-spacing: -.03em;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+    h3 {
+      margin-bottom: 11px;
+      color: var(--night);
+      font-size: 1.28rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .brand-bar { background: var(--white); border-bottom: 1px solid var(--line); }
+    .brand-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      color: var(--night);
+      font-family: var(--serif);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .audience-ribbon {
+      padding: 9px 16px;
+      color: var(--paper);
+      background: var(--night);
+      font-size: .73rem;
+      font-weight: 800;
+      letter-spacing: .045em;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .hero { padding: 34px 8px 48px; background: var(--paper); text-align: center; }
+    .hero-lead { max-width: 790px; margin: 0 auto 21px; color: var(--muted); font-size: 1rem; line-height: 1.58; }
+    .hero-lead strong { color: var(--ink); font-weight: 800; }
+    .vsl-shell {
+      width: min(100%, 630px);
+      margin: 0 auto 20px;
+      padding: 8px;
+      background: var(--night);
+      border-radius: 14px;
+      box-shadow: 0 22px 52px rgba(8,39,42,.15);
+    }
+    .vsl {
+      display: grid;
+      aspect-ratio: 16 / 9;
+      color: var(--night);
+      background: var(--white);
+      border-radius: 8px;
+      padding: 12px;
+      place-items: center;
+    }
+    .vsl span { font-size: .78rem; font-weight: 800; letter-spacing: .05em; }
+    .authority {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 96px 1fr;
+      gap: 19px;
+      max-width: 820px;
+      margin: 0 auto 17px;
+      padding: 16px 20px;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(8,39,42,.08);
+      text-align: left;
+    }
+    .authority-photo { width: 96px; height: 112px; overflow: hidden; background: var(--mist); border-radius: 8px; }
+    .authority-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+    .authority-name { margin: 0 0 2px; color: var(--night); font-family: var(--serif); font-size: 1.12rem; font-weight: 700; line-height: 1.2; }
+    .authority-credentials { margin: 0 0 8px; color: var(--coral-dark); font-size: .76rem; font-weight: 800; line-height: 1.45; }
+    .authority p { margin: 0; font-size: .79rem; line-height: 1.48; }
+    .authority strong { color: var(--night); font-weight: 800; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      min-height: 54px;
+      padding: 14px 25px;
+      color: var(--white);
+      background: var(--coral-dark);
+      border: 2px solid var(--coral-dark);
+      border-radius: 6px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.14);
+      font-size: .82rem;
+      font-weight: 800;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 160ms var(--ease), background-color 160ms ease, border-color 160ms ease, box-shadow 160ms var(--ease);
+    }
+    .button:hover { background: var(--night); border-color: var(--night); box-shadow: 0 14px 30px rgba(0,0,0,.18); transform: translateY(-2px); }
+    .button-note { margin: 8px 0 0; color: var(--coral-dark); font-size: .78rem; font-weight: 700; }
+
+    .section-title { max-width: 800px; margin: 0 auto 34px; text-align: center; }
+    .section-title::after {
+      display: block;
+      width: 56px;
+      height: 3px;
+      margin: 20px auto 0;
+      background: var(--coral);
+      content: "";
+    }
+
+    .choices { background: var(--white); }
+    .choices-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 980px; margin: 0 auto 29px; }
+    .choice { min-height: 210px; padding: 31px 33px; border-radius: 14px; }
+    .choice:first-child { background: var(--paper); }
+    .choice:last-child { background: var(--mist); }
+    .choice p { margin: 0; color: var(--muted); }
+    .choice-action { text-align: center; }
+    .judge { margin-bottom: 18px; color: var(--night); font-family: var(--serif); font-size: 1.2rem; font-weight: 700; }
+
+    .outcome { position: relative; color: var(--white); background: var(--night); text-align: center; }
+    .outcome::before { position: absolute; top: 0; left: 50%; width: 84px; height: 4px; background: var(--gold); content: ""; transform: translateX(-50%); }
+    .outcome h2 { color: var(--white); }
+    .outcome p { color: rgba(255,255,255,.76); }
+    .outcome p:first-of-type { color: rgba(255,255,255,.92); }
+    .outcome .button { margin-top: 11px; }
+
+    .contents { background: var(--paper); }
+    .section-intro {
+      max-width: 880px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .section-intro h2 {
+      max-width: 19ch;
+      margin: 0 auto;
+      font-size: clamp(2.45rem, 4.7vw, 3.6rem);
+      letter-spacing: -.035em;
+      line-height: 1.03;
+    }
+    .section-emphasis {
+      color: var(--coral-dark);
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: .09em;
+      text-underline-offset: .15em;
+    }
+    .section-intro p { max-width: 720px; margin: 25px auto 0; color: var(--muted); font-size: 1rem; line-height: 1.72; }
+    .lesson-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 1000px; margin: 0 auto; }
+    .lesson {
+      position: relative;
+      min-height: 222px;
+      padding: 34px;
+      overflow: hidden;
+      background: var(--white);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(8,39,42,.07);
+      transition: transform 180ms var(--ease), box-shadow 180ms var(--ease);
+    }
+    .lesson::before {
+      display: block;
+      width: 48px;
+      height: 3px;
+      margin-bottom: 24px;
+      background: var(--coral);
+      content: "";
+      transform: scaleX(.6);
+      transform-origin: left;
+      transition: transform 180ms var(--ease);
+    }
+    .lesson h3 { max-width: 30ch; }
+    .lesson p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .bonuses { background: var(--white); }
+    .bonus-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; max-width: 1000px; margin: 0 auto; }
+    .bonus-card {
+      position: relative;
+      grid-column: span 2;
+      min-height: 255px;
+      padding: 29px;
+      overflow: hidden;
+      background: var(--mist);
+      border-radius: 14px;
+      transition: transform 180ms var(--ease), background-color 180ms ease, box-shadow 180ms var(--ease);
+    }
+    .bonus-card:nth-child(4) { grid-column: 2 / span 2; }
+    .bonus-card:nth-child(5) { grid-column: 4 / span 2; }
+    .bonus-card::before {
+      display: block;
+      width: 40px;
+      height: 2px;
+      margin-bottom: 18px;
+      background: var(--gold);
+      content: "";
+      transform: scaleX(.65);
+      transform-origin: left;
+      transition: transform 180ms var(--ease);
+    }
+    .bonus-label { color: var(--coral-dark); font-size: .8rem; font-weight: 800; letter-spacing: .05em; }
+    .bonus-card h3 { margin: 13px 0 10px; }
+    .bonus-card p { margin: 0; color: var(--muted); font-size: .91rem; }
+
+    @media (hover: hover) and (pointer: fine) {
+      .lesson:hover { box-shadow: 0 20px 44px rgba(8,39,42,.13); transform: translateY(-5px); }
+      .lesson:hover::before, .bonus-card:hover::before { transform: scaleX(1); }
+      .bonus-card:hover { background: var(--paper); box-shadow: 0 18px 42px rgba(8,39,42,.1); transform: translateY(-5px); }
+    }
+
+    .decision { background: var(--mist); text-align: center; }
+    .decision p { color: var(--muted); }
+    .decision .turn { margin: 22px 0 12px; color: var(--night); font-family: var(--serif); font-size: 1.2rem; font-weight: 700; }
+
+    .offer { padding: 74px 8px; background: var(--night); }
+    .offer-box { width: min(100%, 690px); margin: 0 auto; overflow: hidden; background: var(--white); border-radius: 16px; box-shadow: 0 24px 58px rgba(0,0,0,.2); }
+    .offer-head { padding: 32px 48px 27px; color: var(--night); background: var(--paper); text-align: center; }
+    .offer-head h2 { max-width: 580px; margin: 0 auto 8px; font-size: clamp(2rem, 3vw, 2.55rem); }
+    .offer-head p { margin: 0; color: var(--muted); }
+    .offer-head small { display: block; margin-top: 12px; color: var(--coral-dark); font-size: .8rem; font-weight: 800; letter-spacing: .05em; }
+    .offer-body { padding: 31px 40px 39px; }
+    .price { margin-bottom: 3px; color: var(--night); font-family: var(--serif); font-size: 4.2rem; font-weight: 700; letter-spacing: -.04em; line-height: .95; text-align: center; }
+    .price-note { margin-bottom: 24px; color: var(--muted); font-size: .8rem; font-weight: 600; text-align: center; }
+    .includes { display: grid; gap: 0; max-width: 600px; margin: 0 auto 28px; padding: 0; list-style: none; }
+    .includes li { padding: 11px 0; color: var(--muted); border-bottom: 1px solid var(--line); font-size: .9rem; line-height: 1.5; }
+    .offer-action { text-align: center; }
+    .offer-action .button { width: min(100%, 420px); }
+
+    .close { padding: 96px 8px 102px; background: var(--paper); text-align: center; }
+    .close .reading { max-width: 700px; }
+    .close p { color: var(--muted); }
+    .close .button { margin-top: 18px; }
+    .disclaimer { padding: 34px 8px 36px; background: #efebe4; border-top: 1px solid var(--line); text-align: center; }
+    .disclaimer-inner {
+      width: min(calc(100% - 32px), 820px);
+      margin: 0 auto;
+    }
+    .disclaimer h2 { margin: 0 0 12px; font-size: clamp(1.5rem, 2.5vw, 1.85rem); }
+    .disclaimer-copy p { margin: 0 auto 9px; color: var(--muted); font-size: .8rem; line-height: 1.58; }
+    .disclaimer-copy p:last-child { margin-bottom: 0; }
+    .footer { padding: 25px 0; color: rgba(255,255,255,.72); background: var(--night-deep); font-family: var(--serif); font-size: .82rem; text-align: center; }
+
+    @media (max-width: 900px) {
+      .section { padding: 60px 8px; }
+      .bonus-grid { grid-template-columns: 1fr 1fr; }
+      .bonus-card, .bonus-card:nth-child(4) { grid-column: auto; }
+      .bonus-card:nth-child(5) { grid-column: 1 / -1; min-height: 0; }
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .container, .reading { width: min(calc(100% - 28px), var(--page)); }
+      .section { padding: 49px 8px; }
+      h1 { font-size: clamp(2.25rem, 10vw, 2.75rem); line-height: 1.08; }
+      h1 .hero-emphasis { margin-top: 7px; }
+      h2 { font-size: clamp(1.8rem, 8vw, 2.2rem); }
+      h3 { font-size: 1.18rem; }
+      .section-intro { margin-bottom: 38px; }
+      .section-intro h2 { max-width: 18ch; font-size: clamp(2.05rem, 9vw, 2.55rem); line-height: 1.07; }
+      .section-intro p { margin-top: 21px; font-size: .94rem; line-height: 1.65; }
+      .brand-inner { min-height: 40px; font-size: .82rem; }
+      .audience-ribbon { padding: 8px 12px; font-size: .75rem; }
+      .hero { padding: 31px 8px 45px; }
+      .hero-lead { font-size: .94rem; }
+      .vsl-shell { padding: 5px; border-radius: 10px; box-shadow: 0 15px 36px rgba(8,39,42,.13); }
+      .vsl { border-radius: 6px; }
+      .authority { grid-template-columns: 1fr; gap: 12px; padding: 17px; text-align: center; }
+      .authority-photo { width: 88px; height: 103px; margin: 0 auto; }
+      .authority-credentials { max-width: 38ch; margin: 3px auto 9px; }
+      .authority p { font-size: .8rem; }
+      .button { width: 100%; padding: 13px 14px; font-size: .75rem; overflow-wrap: anywhere; }
+      .choices-grid { grid-template-columns: 1fr; }
+      .choice { min-height: 0; padding: 27px 25px; }
+      .lesson-grid, .bonus-grid { grid-template-columns: 1fr; }
+      .lesson { min-height: 0; padding: 27px 25px; }
+      .bonus-card, .bonus-card:nth-child(4), .bonus-card:nth-child(5) { grid-column: 1; min-height: 0; padding: 26px 25px; }
+      .offer { padding: 52px 8px; }
+      .offer-head { padding: 26px 19px 22px; }
+      .offer-body { padding: 26px 20px 31px; }
+      .price { font-size: 3.7rem; }
+      .close { padding: 68px 8px 74px; }
+      .disclaimer { padding: 29px 8px 31px; }
+      .disclaimer-copy p { font-size: .78rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+
+    @media (pointer: coarse) {
+      .button { min-height: 56px; touch-action: manipulation; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="brand-bar">
+    <div class="brand-inner">Optimal Hormones, Optimal You™</div>
+  </header>
+  <div class="audience-ribbon">FOR WOMEN WHOSE SLEEP CHANGED WITH PERIMENOPAUSE OR MENOPAUSE</div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>IF YOU KEEP WAKING UP AT 3 A.M.<br><span class="hero-emphasis">NIGHT AFTER NIGHT…</span></h1>
+        <p class="hero-lead"><strong>What’s happening to your sleep may not be random.</strong> Uncover what may be triggering those sudden jolts, and frustrating wake-ups, and learn what you can do to sleep longer, stay asleep, and wake up refreshed instead of exhausted.</p>
+
+        <div class="vsl-shell">
+          <div class="vsl" role="img" aria-label="Video sales letter placeholder"><span>[VSL HERE]</span></div>
+        </div>
+
+        <div class="authority">
+          <div class="authority-photo">
+            <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2148738359/images/08e381b8046ce5740276bc30e9b9a453.png" alt="Colleen Power Kupka, MSN, FNP-C" width="96" height="112">
+          </div>
+          <div class="authority-copy">
+            <div class="authority-name">Colleen Power Kupka, MSN, FNP-C</div>
+            <div class="authority-credentials">Board-Certified Family Nurse Practitioner · 25+ years in healthcare · Specialized in hormone health · Trained by Dr. Neal Rouzier</div>
+            <p>As a nurse practitioner specializing in women’s health and hormonal changes, I created <strong>The 3 A.M. Wake-Up Reset Method</strong> after experiencing these middle-of-the-night wake-ups myself. Now, I’m helping women in perimenopause and menopause understand what may be behind this frustrating change — and take practical steps toward more restful nights and better mornings.</p>
+          </div>
+        </div>
+
+        <a class="button" href="https://www.optimizemyhormones.com/offers/FobvQgeM/checkout">YES — I WANT THE 3 A.M. WAKE-UP RESET METHOD →</a>
+        <p class="button-note">Start unpacking everything in the next 2 minutes!</p>
+      </div>
+    </section>
+
+    <section class="section choices">
+      <div class="container">
+        <div class="section-title"><h2>By The End Of This Page, You Have Two Choices.</h2></div>
+        <div class="choices-grid">
+          <article class="choice"><p>You can keep waking up at 2 or 3 A.M., lying there waiting for sleep to come back, then dragging yourself through another exhausted day with less energy, less patience, and a foggy head.</p></article>
+          <article class="choice"><p>Or you can start taking practical steps to help your body stay asleep longer, get more restful sleep, and wake up feeling more refreshed — so you have the energy and clarity to actually enjoy the day ahead.</p></article>
+        </div>
+        <div class="choice-action">
+          <p class="judge">I’ll let you be the judge of which sounds better.</p>
+          <a class="button" href="https://www.optimizemyhormones.com/offers/FobvQgeM/checkout">YES — I WANT THE 3 A.M. WAKE-UP RESET METHOD →</a>
+          <p class="button-note">Start unpacking everything in the next 2 minutes!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outcome">
+      <div class="reading">
+        <h2>Here’s What Happens When You Say “YES” To The “3 A.M. Wake-Up Reset Method”</h2>
+        <p>You stop going to bed wondering whether tonight will be another night of broken sleep. You start knowing what may be behind those middle-of-the-night wake-ups and what you can do when they happen. Instead of spending hours watching the clock, you can work toward staying asleep longer, getting deeper and more restorative sleep, and waking up feeling genuinely rested.</p>
+        <p>And that changes more than your nights — you have more energy when you wake up, more patience throughout the day, better focus at work, and less of that feeling that you’re simply trying to survive until bedtime.</p>
+        <a class="button" href="https://www.optimizemyhormones.com/offers/FobvQgeM/checkout">Get Access To This Method &gt;&gt;&gt;</a>
+      </div>
+    </section>
+
+    <section class="section contents">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Four Lessons To Help You Get From “Why Am I Awake?” To <span class="section-emphasis">“I Know What To Do Next.”</span></h2>
+          <p>Inside this method, you’ll discover what may be driving those frustrating wake-ups, the connection between hormonal changes and your sleep, and practical strategies you can start using to work toward longer stretches of sleep, deeper rest, and more refreshed mornings.</p>
+        </div>
+        <div class="lesson-grid">
+          <article class="lesson">
+            <h3>THE 3 A.M. WAKE-UP</h3>
+            <p>Why do you fall asleep easily but wake up wide awake a few hours later? You’ll learn why this specific pattern matters and what your middle-of-the-night wake-up may be telling you.</p>
+          </article>
+          <article class="lesson">
+            <h3>WHY IT HAPPENS DURING PERIMENOPAUSE &amp; MENOPAUSE</h3>
+            <p>You’ll learn how hormonal changes can affect blood sugar, cortisol, your nervous system, and other factors connected to staying asleep.</p>
+          </article>
+          <article class="lesson">
+            <h3>THE HORMONE THAT HELPS YOUR BRAIN WIND DOWN</h3>
+            <p>You’ll learn about an often-overlooked hormone involved in helping your brain wind down for sleep — and why changes during this stage of life can matter.</p>
+          </article>
+          <article class="lesson">
+            <h3>CREATING THE CONDITIONS FOR DEEPER SLEEP</h3>
+            <p>You’ll get practical strategies you can start using to create better conditions for your body to stay asleep and return to deeper, steadier rest.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bonuses">
+      <div class="container">
+        <div class="section-intro">
+          <h2>The Tools You’ll Want <span class="section-emphasis">Beside You</span></h2>
+          <p>Plus, you’ll get these practical bonus tools to help you put in the 3 A.M. Wake-Up Reset Method into practice — from a simple middle-of-the-night checklist and sleep tracker to provider questions, calming audio recommendations, and an educational sleep-support guide.</p>
+        </div>
+        <div class="bonus-grid">
+          <article class="bonus-card">
+            <div class="bonus-label">BONUS #1</div>
+            <h3>3 A.M. Sleep Reset Checklist</h3>
+            <p>A simple step-by-step checklist to keep beside your bed and follow when you wake up in the middle of the night.</p>
+          </article>
+          <article class="bonus-card">
+            <div class="bonus-label">BONUS #2</div>
+            <h3>Sleep Tracker</h3>
+            <p>Track your sleep, wake-ups, patterns, and how you feel the next day so you can start seeing what may be affecting your nights.</p>
+          </article>
+          <article class="bonus-card">
+            <div class="bonus-label">BONUS #3</div>
+            <h3>Questions To Ask Your Provider</h3>
+            <p>A ready-to-use list of questions to help you have a more informed conversation with your healthcare provider about your sleep and hormonal changes.</p>
+          </article>
+          <article class="bonus-card">
+            <div class="bonus-label">BONUS #4</div>
+            <h3>Sleep Audio Support Recommendations</h3>
+            <p>A curated list of calming sounds and audio options — including brown noise, gentle rain, and other relaxing choices — you can try as part of your nighttime routine.</p>
+          </article>
+          <article class="bonus-card">
+            <div class="bonus-label">BONUS #5</div>
+            <h3>Supplements For Better Sleep: What To Discuss With Your Provider</h3>
+            <p>An educational overview of commonly used sleep-support supplements, along with questions and considerations to discuss with your healthcare provider before trying anything new.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section decision">
+      <div class="reading">
+        <h2>The Next Step? Well… That’s Your Call.</h2>
+        <p>I can show you the door. I can give you the information, the strategies, and the tools. but walking through it is your call.</p>
+        <p class="turn">You can keep hoping tonight will be different.</p>
+        <p>You can keep telling yourself you’ll figure it out, that maybe your sleep will eventually go back to normal, that tomorrow won’t feel quite as exhausting.</p>
+        <p>But another restless night doesn’t just stay in the bedroom - it follows you into your morning, your work, your relationships, your patience, your focus, and the way you feel about yourself throughout the day.</p>
+      </div>
+    </section>
+
+    <section class="offer" id="access">
+      <div class="container">
+        <div class="offer-box">
+          <div class="offer-head">
+            <h2>The 3 A.M. Wake-Up Reset Method</h2>
+            <p>Understand why you may be waking up — and what you can do about it.</p>
+            <small>INSTANT ACCESS</small>
+          </div>
+          <div class="offer-body">
+            <p class="price">$67</p>
+            <p class="price-note">One-time payment · Immediate access · Yours to keep</p>
+            <ul class="includes">
+              <li>✓ Four lessons — Learn what may be behind those middle-of-the-night wake-ups and what you can try.</li>
+              <li>✓ Sleep Audio Support Recommendations — Calming audio options to help you settle back down.</li>
+              <li>✓ Supplements For Better Sleep Guide — An educational look at common sleep-support supplements and what to discuss with your provider.</li>
+              <li>✓ The 3 A.M. Sleep Reset Checklist — Know exactly what to do when you wake up in the middle of the night.</li>
+              <li>✓ Questions To Ask Your Provider — Take the right questions with you to your next appointment.</li>
+              <li>✓ Sleep Tracker — Keep track of your sleep and look for patterns over time.</li>
+            </ul>
+            <div class="offer-action"><a class="button" href="https://www.optimizemyhormones.com/offers/FobvQgeM/checkout">Get Access To This Method &gt;&gt;&gt;</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="close">
+      <div class="reading">
+        <h2>Isn’t it worth deciding, right now?</h2>
+        <p>Take a closer look at what may be happening and give yourself a practical place to start. You’ve spent enough mornings recovering from the night before.</p>
+        <p>It may be time to start working toward nights that feel different.</p>
+        <a class="button" href="https://www.optimizemyhormones.com/offers/FobvQgeM/checkout">YES — I WANT THE 3 A.M. WAKE-UP RESET METHOD →</a>
+        <p class="button-note">Start unpacking everything in the next 2 minutes!</p>
+      </div>
+    </section>
+
+    <section class="disclaimer" aria-labelledby="important-information">
+      <div class="disclaimer-inner">
+        <h2 id="important-information">Important Information</h2>
+        <div class="disclaimer-copy">
+          <p>The 3 A.M. Wake-Up Reset Method is for general educational and informational purposes only. It is not medical advice, does not diagnose, treat, cure, or prevent any condition, and does not create a provider-patient relationship. Always consult a qualified healthcare professional before making decisions about symptoms, treatment, medications, or supplements. Individual results vary.</p>
+          <p>Supplements may cause side effects or interact with medications. If you believe you are experiencing a medical emergency, call 911 or your local emergency number. You remain responsible for your healthcare decisions; to the fullest extent permitted by law, the creator and business disclaim liability for actions taken based on this educational content.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">Optimal Hormones, Optimal You™</div></footer>
+</body>
+</html>
